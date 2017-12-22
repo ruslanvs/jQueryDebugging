@@ -4,8 +4,9 @@
 	<link rel="stylesheet" type="text/css" href="debugging_jquery.css">
 	<script type="text/javascript" src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
 	<script type="text/javascript">
+		$(document).ready(function() { // nr 2
 	
-			$('p, h3, li').hoverfunction(){
+			$('p, h3, li').hover(function(){ // nr 5
 				$(this).css('color', 'white');
 			}, function(){
 				$(this).css('color', 'black');
@@ -17,16 +18,18 @@
 
 			$('img').click(function(){
 				$(this).slideUp();
-			);
+			}); // CURLY BRACKET ADDED HERE // nr1
 
 			$('h5').click(function(){
-				$('img').slide Down();
+				$('img').slideDown(); // SPACE REMOVED HERE // nr 4
 			});
 
 			$('button').click(function(){
-				var result = $('input:checked').value()  
+				var result = $('input:checked').val(); // nr 3
 				alert("Thank you for your input, we like " + result + " too!");
-			});	
+			});
+
+		})
 
 	</script>
 </head>
